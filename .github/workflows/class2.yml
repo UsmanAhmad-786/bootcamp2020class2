@@ -34,14 +34,11 @@ jobs:
           cmd: install #npm start or yarn start(by default it happen automatically)
     
       - name: creating build
-        run: npm build
+        run: npm run build&&gh-pages -d build
         
       - name: installing surge
         run: npm install -g surge
       
       - name: Deploying on surge
-        uses: peaceiris/actions-gh-pages@v3
-        with:
-          deploy_key: ${{Secrets.MYTOKEN}}
-          publish_dir: ./build
+        run: surge ./build btcmp2020class2.surge.sh --token ${{secrets.MYTOKEN}} 
    
