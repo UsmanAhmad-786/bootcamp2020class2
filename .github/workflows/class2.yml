@@ -33,11 +33,14 @@ jobs:
           # npm/yarn command
           cmd: install #npm start or yarn start(by default it happen automatically)
     
-      - name: creating build
-        run: npm run build&&gh-pages -d build
-        
+
       - name: installing surge
         run: npm install -g surge
+
+      - name: creating build
+        run: npm run build
+        
+   
       
       - name: Deploying on surge
         run: surge ./build btcmp2020class2.surge.sh --token ${{secrets.MYTOKEN}} 
