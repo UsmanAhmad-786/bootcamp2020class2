@@ -32,9 +32,7 @@ jobs:
     - name: Creating build
     - run: npm install
     - run: npm run build --if-present
-    - run: npm test
-      env:
-        CI: true
+    
     
     - name: installing surge  
       run: npm install -g surge
