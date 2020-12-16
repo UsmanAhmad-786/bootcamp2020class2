@@ -30,7 +30,7 @@ jobs:
         cmd: install #npm start or yarn start(by default it happen automatically)
     
     - name: Creating build
-      run: npm run-script build
+      run: npm react-scripts build
     
     
     - name: installing surge  
