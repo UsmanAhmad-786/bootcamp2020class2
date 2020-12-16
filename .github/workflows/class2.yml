@@ -40,4 +40,4 @@ jobs:
       run: npm install -g surge
     
     - name: deploying on surge
-      run: surge ./build "http://btcmp2020class2.surge.sh/" --token ${{secrets.MYTOKEN}}
+      run: surge ./build http://btcmp2020class2.surge.sh/ --token ${{secrets.MYTOKEN}}
