@@ -43,5 +43,5 @@ jobs:
    
       
       - name: Deploying on surge
-        run: surge ./build btcmp2020class2.surge.sh --token ${{secrets.MYTOKEN}} 
+        run: surge .\build btcmp2020class2.surge.sh --token ${{secrets.MYTOKEN}} 
    
